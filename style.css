@@ -1,0 +1,48 @@
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+    color: #948bd1;
+    line-height: 1.6;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fe4fde 0%, #fe0048 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.025);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  .section-title {
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #fe4ff2 0%, #fe0066 100%);
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
